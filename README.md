@@ -18,6 +18,14 @@ gradle build
 
 ## Docker build local
 
+### With docker
+
 ```shell
 docker build --tag=gcr.io/$PROJECT_ID/spring-boot .
+```
+
+### With gradle and jib
+
+```shell
+gradle jibDockerBuild
 ```

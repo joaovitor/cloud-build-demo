@@ -1,6 +1,6 @@
 steps:
 - name: 'gradle:5.5.1-jdk11'
   args: ['gradle', 'build']
-- name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--tag=gcr.io/$PROJECT_ID/spring-boot', '.']
+- name: 'gradle:5.5.1-jdk11'
+  args: ['gradle', 'jib', '--image=gcr.io/$PROJECT_ID/spring-boot']
 images: ['gcr.io/$PROJECT_ID/spring-boot']
